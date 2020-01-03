@@ -14,5 +14,6 @@ export const square = (integer) => {
 
 export const total = () => {
   let squaresTotal = BigInt(16).pow(16);
-  return String(BigInt(squaresTotal - 1))
+  let answer = squaresTotal.value.map((val, i) => i === 0 ? val - 1 : val).reverse().join('')
+  return String(answer)
 };
